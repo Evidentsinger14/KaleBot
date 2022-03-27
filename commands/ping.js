@@ -1,5 +1,11 @@
-const { Message } = require("discord.js");
+const { Message, MessageEmbed } = require("discord.js");
 
-modules.export.run = async (client, message, args) =>{
-    message.reply("test");
+module.exports.run = async (client, message, args) =>{
+
+
+    const embed = new MessageEmbed()
+    .setColor("DARKER_GREY")
+    .setDescription(`Latency is ${Date.now() - message.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`);
+
+    return message.channel.send({ embeds: [embed]});
 }
