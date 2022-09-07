@@ -23,7 +23,5 @@ fs.readdirSync("./events/").forEach(file => {
     })
 });
 
-
-
-
 client.login(process.env.TOKEN);
+
