@@ -27,7 +27,7 @@ fs.readdirSync("./events/").forEach(file => {
 
 
 client.login(process.env.TOKEN);
-console.log("Bot Loaded...");
+console.log("Bot Ready...");
 
 
 // client.on("messageCreate", async message => {
